@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="445" viewBox="0 0 720 445" role="img" aria-labelledby="title">
+  <title id="title">Placeholder de branding</title>
+  <rect width="720" height="445" fill="#fbf0e5"/>
+  <circle cx="150" cy="125" r="115" fill="#52d1c4"/>
+  <circle cx="580" cy="80" r="92" fill="#ffcf54"/>
+  <rect x="210" y="85" width="220" height="280" rx="24" fill="#172857" opacity=".88"/>
+  <circle cx="320" cy="210" r="70" fill="#fff"/>
+  <rect x="450" y="170" width="130" height="150" rx="18" fill="#d00086" opacity=".82"/>
+  <path d="M60 380c120-80 230-100 350-42 90 44 175 32 250-14" fill="none" stroke="#ff7b41" stroke-width="44" opacity=".85"/>
+</svg>

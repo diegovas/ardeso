@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="445" viewBox="0 0 720 445" role="img" aria-labelledby="title">
+  <title id="title">Placeholder de camara</title>
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#27304e"/><stop offset="1" stop-color="#d6a05b"/></linearGradient></defs>
+  <rect width="720" height="445" fill="url(#g)"/>
+  <circle cx="180" cy="180" r="90" fill="#f6d7aa" opacity=".28"/>
+  <rect x="280" y="165" width="230" height="125" rx="18" fill="#111a34"/>
+  <circle cx="375" cy="228" r="72" fill="#06102b"/>
+  <circle cx="375" cy="228" r="42" fill="#596c9a"/>
+  <rect x="470" y="130" width="120" height="75" rx="10" fill="#0f1831"/>
+  <rect x="130" y="95" width="80" height="260" rx="36" fill="#14182b"/>
+</svg>

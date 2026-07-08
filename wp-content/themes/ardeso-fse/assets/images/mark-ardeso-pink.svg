@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220" role="img" aria-labelledby="title">
+  <title id="title">Marca Ardeso magenta</title>
+  <rect width="220" height="220" rx="16" fill="#d00086"/>
+  <path d="M93 62 121 36l28 26-16 15-12-11-13 12Z" fill="#fff"/>
+  <path d="M72 144c0-29 20-50 48-50 27 0 48 21 48 50v28h-34v-28c0-10-6-18-16-18s-17 8-17 18 7 18 17 18c5 0 9-1 13-4v31c-6 3-14 5-22 5-21 0-37-17-37-50Z" fill="#fff"/>
+</svg>

@@ -1,0 +1,33 @@
+<?php
+/**
+ * Title: Página de servicios
+ * Slug: ardeso-fse/services-page
+ * Categories: ardeso-pages
+ * Inserter: true
+ */
+?>
+<!-- wp:group {"tagName":"section","className":"ardeso-section ardeso-no-line","layout":{"type":"constrained"}} -->
+<section class="wp-block-group ardeso-section ardeso-no-line">
+	<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/banner-camera.svg' ) ); ?>","alt":"Banner de cámara","dimRatio":10,"minHeight":250,"className":"ardeso-banner","layout":{"type":"constrained"}} -->
+	<div class="wp-block-cover ardeso-banner" style="min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-10 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Banner de cámara" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/banner-camera.svg' ) ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
+		<!-- wp:heading {"level":1,"textAlign":"center"} -->
+		<h1 class="wp-block-heading has-text-align-center">Nosotros Movemos<br>tu marca</h1>
+		<!-- /wp:heading -->
+	</div></div>
+	<!-- /wp:cover -->
+	<!-- wp:heading {"textAlign":"center","className":"ardeso-display ardeso-display-medium"} -->
+	<h2 class="wp-block-heading has-text-align-center ardeso-display ardeso-display-medium"><span class="ardeso-blue">Descubre cuáles son</span> <span class="ardeso-pink">nuestros servicios</span></h2>
+	<!-- /wp:heading -->
+	<!-- wp:paragraph {"align":"center","className":"ardeso-down"} --><p class="has-text-align-center ardeso-down">⌄</p><!-- /wp:paragraph -->
+	<!-- wp:group {"className":"ardeso-service-cards","layout":{"type":"default"}} -->
+	<div class="wp-block-group ardeso-service-cards">
+		<!-- wp:media-text {"mediaUrl":"<?php echo esc_url( get_theme_file_uri( 'assets/images/photo-team.svg' ) ); ?>","mediaType":"image","mediaWidth":50,"mediaAlt":"Branding","className":"ardeso-service-card"} --><div class="wp-block-media-text is-stacked-on-mobile ardeso-service-card" style="grid-template-columns:50% auto"><figure class="wp-block-media-text__media"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/photo-team.svg' ) ); ?>" alt="Branding"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Branding</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Construimos marcas claras, memorables y consistentes para conectar con la audiencia correcta.</p><!-- /wp:paragraph --></div></div><!-- /wp:media-text -->
+		<!-- wp:media-text {"mediaUrl":"<?php echo esc_url( get_theme_file_uri( 'assets/images/photo-design.svg' ) ); ?>","mediaType":"image","mediaWidth":50,"mediaAlt":"Diseño gráfico","className":"ardeso-service-card"} --><div class="wp-block-media-text is-stacked-on-mobile ardeso-service-card" style="grid-template-columns:50% auto"><figure class="wp-block-media-text__media"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/photo-design.svg' ) ); ?>" alt="Diseño gráfico"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Diseño gráfico</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Diseñamos piezas visuales para campañas, redes sociales, impresos y presentaciones.</p><!-- /wp:paragraph --></div></div><!-- /wp:media-text -->
+		<!-- wp:media-text {"mediaUrl":"<?php echo esc_url( get_theme_file_uri( 'assets/images/photo-social.svg' ) ); ?>","mediaType":"image","mediaWidth":50,"mediaAlt":"Redes sociales","className":"ardeso-service-card"} --><div class="wp-block-media-text is-stacked-on-mobile ardeso-service-card" style="grid-template-columns:50% auto"><figure class="wp-block-media-text__media"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/photo-social.svg' ) ); ?>" alt="Redes sociales"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Estrategia de Redes Sociales</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Planificamos mensajes, formatos y calendarios para sostener una presencia digital fuerte.</p><!-- /wp:paragraph --></div></div><!-- /wp:media-text -->
+		<!-- wp:media-text {"mediaUrl":"<?php echo esc_url( get_theme_file_uri( 'assets/images/photo-camera.svg' ) ); ?>","mediaType":"image","mediaWidth":50,"mediaAlt":"Producción de contenido","className":"ardeso-service-card"} --><div class="wp-block-media-text is-stacked-on-mobile ardeso-service-card" style="grid-template-columns:50% auto"><figure class="wp-block-media-text__media"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/photo-camera.svg' ) ); ?>" alt="Producción de contenido"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Producción de contenido</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Producimos fotografía, video y recursos para campañas con alto impacto visual.</p><!-- /wp:paragraph --></div></div><!-- /wp:media-text -->
+		<!-- wp:media-text {"mediaUrl":"<?php echo esc_url( get_theme_file_uri( 'assets/images/photo-branding.svg' ) ); ?>","mediaType":"image","mediaWidth":50,"mediaAlt":"Planificación estratégica","className":"ardeso-service-card"} --><div class="wp-block-media-text is-stacked-on-mobile ardeso-service-card" style="grid-template-columns:50% auto"><figure class="wp-block-media-text__media"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/photo-branding.svg' ) ); ?>" alt="Planificación estratégica"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Planificación estratégica</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Ordenamos objetivos, acciones y métricas para que cada campaña tenga dirección.</p><!-- /wp:paragraph --></div></div><!-- /wp:media-text -->
+		<!-- wp:media-text {"mediaUrl":"<?php echo esc_url( get_theme_file_uri( 'assets/images/photo-design.svg' ) ); ?>","mediaType":"image","mediaWidth":50,"mediaAlt":"Sitios web","className":"ardeso-service-card"} --><div class="wp-block-media-text is-stacked-on-mobile ardeso-service-card" style="grid-template-columns:50% auto"><figure class="wp-block-media-text__media"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/photo-design.svg' ) ); ?>" alt="Sitios web"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"level":3} --><h3 class="wp-block-heading">Diseño de sitios web</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Creamos sitios editables, responsivos y alineados a la identidad de cada marca.</p><!-- /wp:paragraph --></div></div><!-- /wp:media-text -->
+	</div>
+	<!-- /wp:group -->
+</section>
+<!-- /wp:group -->

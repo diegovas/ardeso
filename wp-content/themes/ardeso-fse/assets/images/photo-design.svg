@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="445" viewBox="0 0 720 445" role="img" aria-labelledby="title">
+  <title id="title">Placeholder de diseño gráfico</title>
+  <rect width="720" height="445" fill="#f7efe9"/>
+  <rect x="70" y="70" width="580" height="300" rx="24" fill="#ffffff"/>
+  <path d="M75 340 225 130 350 295 455 150 650 340Z" fill="#d00086" opacity=".75"/>
+  <circle cx="220" cy="165" r="75" fill="#ffcf54" opacity=".8"/>
+  <rect x="420" y="105" width="125" height="125" rx="16" fill="#001d8f" opacity=".86"/>
+</svg>

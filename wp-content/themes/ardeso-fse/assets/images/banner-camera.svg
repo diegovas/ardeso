@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="250" viewBox="0 0 1300 250" role="img" aria-labelledby="title">
+  <title id="title">Banner de camara</title>
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#202a45"/><stop offset=".48" stop-color="#7b674f"/><stop offset="1" stop-color="#e6b658"/></linearGradient></defs>
+  <rect width="1300" height="250" fill="url(#g)"/>
+  <circle cx="920" cy="124" r="120" fill="#172857" opacity=".55"/>
+  <circle cx="920" cy="124" r="72" fill="#98a7bf" opacity=".75"/>
+  <circle cx="920" cy="124" r="38" fill="#1a2342"/>
+  <circle cx="210" cy="70" r="45" fill="#fff" opacity=".25"/>
+  <circle cx="330" cy="156" r="70" fill="#fff" opacity=".16"/>
+</svg>

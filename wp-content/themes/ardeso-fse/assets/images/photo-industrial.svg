@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="410" viewBox="0 0 720 410" role="img" aria-labelledby="title">
+  <title id="title">Placeholder industrial</title>
+  <rect width="720" height="410" fill="#dfe7ee"/>
+  <rect x="0" y="255" width="720" height="155" fill="#a9b7c5"/>
+  <g stroke="#172857" stroke-width="10" opacity=".45">
+    <path d="M60 45v260M150 45v260M240 45v260M330 45v260M420 45v260M510 45v260M600 45v260"/>
+  </g>
+  <circle cx="265" cy="178" r="54" fill="#ffcf54"/>
+  <rect x="220" y="220" width="95" height="130" rx="24" fill="#172857"/>
+  <circle cx="455" cy="166" r="50" fill="#ffcf54"/>
+  <rect x="415" y="210" width="90" height="125" rx="24" fill="#d00086"/>
+</svg>

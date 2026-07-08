@@ -1,0 +1,53 @@
+.DS_Store
+
+# Keep the full WordPress install available locally, but only track the custom theme.
+/*
+!/.gitignore
+!/README.md
+!/AGENTS.md
+!/docker-compose.yml
+!/docker-dev.sh
+!/.docker/
+!/.docker/**
+!/wp-content/
+/wp-content/*
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/ardeso-fse/
+!/wp-content/themes/ardeso-fse/**
+
+# Local database exports/backups can contain production data and password hashes.
+*.sql
+*.sql.gz
+*.zip
+!/.docker/**/*.sql
+
+# Local references and generated artifacts.
+*.pdf
+
+# WordPress environment-specific configuration and server artifacts.
+wp-config.php
+.htaccess
+.htaccess.bk
+.ftpquota
+.user.ini
+access.log
+error.log
+debug.log
+
+# Generated WordPress/runtime data.
+wp-content/cache/
+wp-content/litespeed/
+wp-content/object-cache.php
+wp-content/updraft/
+wp-content/upgrade/
+wp-content/upgrade-temp-backup/
+wp-content/ai1wm-backups/
+wp-content/uploads/
+wp-content/uploads-webpc/
+wp-content/w3tc-config/
+wp-content/wflogs/
+
+# Local editor and OS noise.
+.idea/
+.vscode/

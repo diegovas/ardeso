@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="246" height="86" viewBox="0 0 246 86" role="img" aria-labelledby="title">
+  <title id="title">Ardeso Marketing y Publicidad</title>
+  <rect width="246" height="86" fill="none"/>
+  <path d="M32 17 48 3l16 14-9 8-7-6-7 6Z" fill="#001d8f"/>
+  <text x="8" y="59" font-family="Montserrat, Arial, sans-serif" font-size="54" font-weight="900" letter-spacing="-3" fill="#001d8f">ardeso</text>
+  <circle cx="28" cy="43" r="16" fill="#d00086" opacity=".75"/>
+  <text x="27" y="80" font-family="Montserrat, Arial, sans-serif" font-size="14" font-weight="800" fill="#d00086">Marketing &amp; Publicidad</text>
+</svg>

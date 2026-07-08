@@ -1,0 +1,57 @@
+name: ardeso
+
+services:
+  wordpress:
+    image: wordpress:6.8.1-php8.2-apache
+    container_name: ardeso_wp
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+    ports:
+      - "8087:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: ${ARDESO_DB_NAME:-u417236294_ZqpVf}
+      WORDPRESS_DB_USER: ${ARDESO_DB_USER:-ardeso}
+      WORDPRESS_DB_PASSWORD: ${ARDESO_DB_PASSWORD:-ardeso_local_password}
+      WP_HOME: http://localhost:8087
+      WP_SITEURL: http://localhost:8087
+      WP_CACHE: "false"
+      LSCWP_OBJECT_CACHE: "false"
+    volumes:
+      - ./:/var/www/html
+
+  db:
+    image: mariadb:11.4
+    container_name: ardeso_db
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: ${ARDESO_DB_NAME:-u417236294_ZqpVf}
+      MARIADB_USER: ${ARDESO_DB_USER:-ardeso}
+      MARIADB_PASSWORD: ${ARDESO_DB_PASSWORD:-ardeso_local_password}
+      MARIADB_ROOT_PASSWORD: ${ARDESO_DB_ROOT_PASSWORD:-ardeso_root_password}
+    volumes:
+      - ardeso_db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  phpmyadmin:
+    image: phpmyadmin:5.2-apache
+    container_name: ardeso_pma
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+    ports:
+      - "8088:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: ${ARDESO_DB_USER:-ardeso}
+      PMA_PASSWORD: ${ARDESO_DB_PASSWORD:-ardeso_local_password}
+
+volumes:
+  ardeso_db_data:

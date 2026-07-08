@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="445" viewBox="0 0 720 445" role="img" aria-labelledby="title">
+  <title id="title">Placeholder de redes sociales</title>
+  <rect width="720" height="445" fill="#d8eef6"/>
+  <rect x="120" y="95" width="410" height="250" rx="45" fill="#172857" opacity=".2"/>
+  <circle cx="165" cy="165" r="50" fill="#d00086"/>
+  <circle cx="290" cy="120" r="58" fill="#001d8f"/>
+  <circle cx="440" cy="210" r="65" fill="#57c5d9"/>
+  <circle cx="250" cy="300" r="72" fill="#ffcf54"/>
+  <text x="145" y="182" font-family="Arial" font-size="42" font-weight="700" fill="#fff">f</text>
+  <text x="267" y="137" font-family="Arial" font-size="35" font-weight="700" fill="#fff">@</text>
+  <text x="413" y="225" font-family="Arial" font-size="35" font-weight="700" fill="#fff">▶</text>
+  <text x="224" y="318" font-family="Arial" font-size="42" font-weight="700" fill="#172857">#</text>
+</svg>

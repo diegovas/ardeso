@@ -1,0 +1,811 @@
+/*
+Theme Name: Ardeso FSE
+Author: Ardeso
+Description: Tema de bloques para agencia de marketing y publicidad, inspirado en el diseño del sitio Ardeso. Incluye plantillas, patrones reutilizables y placeholders editables para textos, imágenes y video.
+Requires at least: 6.4
+Tested up to: 6.8
+Requires PHP: 7.4
+Version: 1.0.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ardeso-fse
+Tags: full-site-editing, block-patterns, custom-logo, one-column, portfolio
+*/
+
+:root {
+	--ardeso-blue: #001d8f;
+	--ardeso-navy: #172857;
+	--ardeso-pink: #d00086;
+	--ardeso-line: #8c99bd;
+	--ardeso-soft: #f5f8fc;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	letter-spacing: 0;
+}
+
+a {
+	text-underline-offset: 0.18em;
+}
+
+.ardeso-site-shell {
+	max-width: 1480px;
+	margin-inline: auto;
+}
+
+.ardeso-header {
+	padding: 30px clamp(20px, 4vw, 56px) 28px;
+}
+
+.ardeso-header .wp-block-navigation__container {
+	gap: clamp(16px, 2vw, 30px);
+}
+
+.ardeso-header .wp-block-navigation-item__content {
+	color: var(--ardeso-navy);
+	font-size: clamp(0.78rem, 0.72rem + 0.18vw, 0.95rem);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.ardeso-header .current-menu-item > .wp-block-navigation-item__content,
+.ardeso-header .wp-block-navigation-item__content:hover {
+	color: var(--ardeso-navy);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+}
+
+.ardeso-main {
+	padding-inline: clamp(20px, 4vw, 56px);
+}
+
+.ardeso-section {
+	border-top: 1px solid var(--ardeso-line);
+	padding-block: clamp(34px, 4.8vw, 64px);
+}
+
+.ardeso-section:first-child,
+.ardeso-no-line {
+	border-top: 0;
+}
+
+.ardeso-section-title {
+	color: var(--ardeso-pink);
+	font-size: clamp(1rem, 0.88rem + 0.45vw, 1.35rem);
+	font-weight: 800;
+	line-height: 1.15;
+	margin: 0 0 34px;
+	text-transform: uppercase;
+}
+
+.ardeso-kicker {
+	color: var(--ardeso-pink);
+	font-weight: 800;
+}
+
+.ardeso-display {
+	font-size: clamp(2rem, 1.2rem + 2.75vw, 4.25rem);
+	font-weight: 500;
+	letter-spacing: 0;
+	line-height: 1.08;
+	margin: 0;
+}
+
+.ardeso-display strong,
+.ardeso-pink {
+	color: var(--ardeso-pink);
+	font-weight: inherit;
+}
+
+.ardeso-blue {
+	color: var(--ardeso-blue);
+}
+
+.ardeso-hero-media {
+	aspect-ratio: 16 / 9;
+	margin-top: clamp(28px, 3.5vw, 52px);
+	position: relative;
+}
+
+.ardeso-hero-media.wp-block-cover {
+	min-height: clamp(170px, 42vw, 560px) !important;
+	padding: 0;
+}
+
+.ardeso-hero-media img,
+.ardeso-hero-media video {
+	border-radius: 0;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.ardeso-play-button .wp-block-button__link {
+	align-items: center;
+	background: #ffffff;
+	border-radius: 999px;
+	color: var(--ardeso-pink);
+	display: flex;
+	font-size: clamp(1.3rem, 0.9rem + 1.45vw, 2rem);
+	height: clamp(64px, 7vw, 104px);
+	justify-content: center;
+	line-height: 1;
+	padding: 0;
+	text-decoration: none;
+	width: clamp(64px, 7vw, 104px);
+}
+
+.ardeso-play {
+	align-items: center;
+	background: #ffffff;
+	border-radius: 999px;
+	color: var(--ardeso-pink);
+	display: flex;
+	height: clamp(78px, 9vw, 132px);
+	justify-content: center;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: clamp(78px, 9vw, 132px);
+}
+
+.ardeso-play::before {
+	border-bottom: 18px solid transparent;
+	border-left: 28px solid currentColor;
+	border-top: 18px solid transparent;
+	content: "";
+	margin-left: 8px;
+}
+
+.ardeso-work-grid {
+	display: grid;
+	gap: clamp(20px, 2.6vw, 36px);
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	align-items: stretch;
+}
+
+.ardeso-work-grid > .wp-block-group {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.ardeso-card-image {
+	aspect-ratio: 1.62;
+	border-radius: 8px;
+	overflow: hidden;
+	margin: 0;
+}
+
+.ardeso-card-image img,
+.ardeso-card-image.wp-block-image img {
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.ardeso-card-title {
+	color: var(--ardeso-navy);
+	font-size: clamp(0.95rem, 0.88rem + 0.18vw, 1.12rem);
+	font-weight: 800;
+	margin: 14px 0 0;
+}
+
+.ardeso-card-title + * {
+	margin-top: 0;
+}
+
+.ardeso-label {
+	border-bottom: 1px solid var(--ardeso-line);
+	color: var(--ardeso-pink);
+	font-size: clamp(0.98rem, 0.88rem + 0.28vw, 1.2rem);
+	font-style: italic;
+	font-weight: 800;
+	margin: 18px 0 28px;
+	padding-bottom: 8px;
+}
+
+.ardeso-slider-row {
+	align-items: center;
+	display: grid;
+	gap: clamp(12px, 2vw, 28px);
+	grid-template-columns: 34px minmax(0, 1fr) 34px;
+	overflow: visible;
+}
+
+.ardeso-slider-viewport {
+	min-width: 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+.ardeso-arrow {
+	align-items: center;
+	appearance: none;
+	background: transparent;
+	border: 0;
+	border-radius: 999px;
+	color: var(--ardeso-navy);
+	cursor: pointer;
+	display: flex;
+	font-size: clamp(2rem, 1.65rem + 0.8vw, 2.8rem);
+	font-weight: 300;
+	height: 34px;
+	justify-content: center;
+	line-height: 1;
+	margin: 0;
+	transition: background-color 160ms ease, color 160ms ease, opacity 160ms ease;
+	width: 34px;
+}
+
+.ardeso-arrow:hover,
+.ardeso-arrow:focus {
+	background: var(--ardeso-soft);
+	color: var(--ardeso-pink);
+	outline: none;
+}
+
+.ardeso-arrow[aria-disabled="true"] {
+	cursor: default;
+	opacity: 0.28;
+	pointer-events: none;
+}
+
+.ardeso-slider-row.is-ready .ardeso-slider-track {
+	display: flex;
+	gap: clamp(18px, 2.4vw, 32px);
+	transition: transform 280ms ease;
+	will-change: transform;
+	width: 100%;
+}
+
+.ardeso-slider-row.is-ready .ardeso-slide {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+}
+
+.ardeso-slider-row.is-ready .ardeso-slide > * {
+	flex: 1 1 auto;
+}
+
+.ardeso-logo-grid,
+.ardeso-values-grid {
+	display: grid;
+	gap: clamp(20px, 2.6vw, 36px);
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	align-items: stretch;
+}
+
+.ardeso-logo-tile,
+.ardeso-value-tile {
+	align-items: center;
+	aspect-ratio: 1.55;
+	background: var(--ardeso-navy);
+	border-radius: 8px;
+	color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	font-size: clamp(0.98rem, 0.88rem + 0.26vw, 1.16rem);
+	font-weight: 800;
+	justify-content: center;
+	padding: 22px;
+	text-align: center;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.ardeso-logo-tile img,
+.ardeso-logo-tile .wp-block-image {
+	max-width: min(55%, 140px);
+	margin: 0;
+}
+
+.ardeso-logo-tile p,
+.ardeso-value-tile {
+	margin: 0;
+}
+
+.ardeso-dots {
+	color: var(--ardeso-navy);
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	line-height: 1;
+	margin-top: 22px;
+	text-align: center;
+}
+
+.ardeso-dot {
+	appearance: none;
+	background: var(--ardeso-navy);
+	border: 0;
+	border-radius: 999px;
+	cursor: pointer;
+	height: 7px;
+	opacity: 0.38;
+	padding: 0;
+	transition: opacity 160ms ease, transform 160ms ease, width 160ms ease;
+	width: 7px;
+}
+
+.ardeso-dot.is-active {
+	opacity: 1;
+	transform: scale(1.08);
+	width: 18px;
+}
+
+.ardeso-services-split {
+	align-items: center;
+	display: grid;
+	gap: clamp(34px, 5vw, 66px);
+	grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
+}
+
+.ardeso-accordion,
+.ardeso-services-split .wp-block-media-text__content {
+	border-top: 1px solid var(--ardeso-line);
+}
+
+.ardeso-accordion details,
+.ardeso-service-detail {
+	border-bottom: 1px solid var(--ardeso-line);
+	padding: 14px 0;
+}
+
+.ardeso-accordion summary,
+.ardeso-service-detail summary {
+	color: var(--ardeso-pink);
+	cursor: pointer;
+	font-size: clamp(1.25rem, 1.05rem + 0.85vw, 1.95rem);
+	font-weight: 500;
+	list-style: none;
+}
+
+.ardeso-accordion summary::-webkit-details-marker,
+.ardeso-service-detail summary::-webkit-details-marker {
+	display: none;
+}
+
+.ardeso-accordion summary::after,
+.ardeso-service-detail summary::after {
+	color: var(--ardeso-navy);
+	content: "+";
+	float: right;
+	font-weight: 700;
+}
+
+.ardeso-accordion details[open] summary::after,
+.ardeso-service-detail[open] summary::after {
+	content: "-";
+}
+
+.ardeso-service-cards {
+	display: grid;
+	gap: clamp(28px, 4vw, 58px) clamp(24px, 3.5vw, 42px);
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	align-items: stretch;
+}
+
+.ardeso-work-grid > *,
+.ardeso-logo-grid > *,
+.ardeso-values-grid > *,
+.ardeso-service-cards > *,
+.ardeso-about-grid > *,
+.ardeso-team-grid > *,
+.ardeso-contact-grid > *,
+.ardeso-portfolio-grid > *,
+.ardeso-brand-cloud > *,
+.ardeso-portfolio-strip > *,
+.ardeso-form-grid > * {
+	margin-block-start: 0 !important;
+	margin-top: 0 !important;
+}
+
+.ardeso-service-card {
+	align-self: stretch;
+	border: 1px solid var(--ardeso-line);
+	border-radius: 20px;
+	display: grid;
+	height: 100%;
+	grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr) !important;
+	overflow: hidden;
+}
+
+.ardeso-service-card .wp-block-media-text__media {
+	height: 100%;
+}
+
+.ardeso-service-card img,
+.ardeso-service-card .wp-block-media-text__media img {
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.ardeso-service-card-content,
+.ardeso-service-card .wp-block-media-text__content {
+	padding: clamp(24px, 3.2vw, 42px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.ardeso-service-card h3,
+.ardeso-team-copy h3 {
+	color: var(--ardeso-pink);
+	font-size: clamp(1.35rem, 1.08rem + 0.9vw, 2rem);
+	font-weight: 500;
+	line-height: 1.08;
+	margin: 0 0 24px;
+}
+
+.ardeso-service-card p,
+.ardeso-team-copy p,
+.ardeso-text {
+	color: var(--ardeso-navy);
+	font-weight: 650;
+	line-height: 1.42;
+}
+
+.ardeso-display-medium {
+	font-size: clamp(1.8rem, 1.25rem + 1.9vw, 3.35rem);
+}
+
+.ardeso-banner {
+	align-items: center;
+	aspect-ratio: 7.2 / 1.35;
+	background-position: center;
+	background-size: cover;
+	border-radius: 26px;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto clamp(64px, 8vw, 104px);
+	max-width: 1300px;
+	overflow: hidden;
+	position: relative;
+}
+
+.ardeso-banner::before {
+	background: rgba(255, 255, 255, 0.26);
+	content: "";
+	inset: 0;
+	position: absolute;
+}
+
+.ardeso-banner h1 {
+	color: #ffffff;
+	font-size: clamp(1.8rem, 1rem + 2.6vw, 3.8rem);
+	font-style: italic;
+	font-weight: 700;
+	line-height: 1.22;
+	margin: 0;
+	position: relative;
+	text-align: center;
+	text-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+}
+
+.ardeso-wide-photo img {
+	aspect-ratio: 16 / 7;
+	object-fit: cover;
+	width: 100%;
+}
+
+.ardeso-down {
+	color: var(--ardeso-pink);
+	font-size: 3.6rem;
+	line-height: 0.8;
+	margin: 16px 0 62px;
+	text-align: center;
+}
+
+.ardeso-about-grid,
+.ardeso-team-grid,
+.ardeso-contact-grid {
+	display: grid;
+	gap: clamp(36px, 5.5vw, 88px);
+	grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
+}
+
+.ardeso-team-images {
+	align-self: end;
+	display: grid;
+	gap: 22px;
+}
+
+.ardeso-team-images .wp-block-image {
+	margin: 0;
+}
+
+.ardeso-team-images img {
+	aspect-ratio: 3.6 / 1;
+	border-radius: 8px;
+	object-fit: cover;
+	width: 100%;
+}
+
+.ardeso-portfolio-strip {
+	display: grid;
+	gap: clamp(20px, 2.6vw, 34px);
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	align-items: stretch;
+}
+
+.ardeso-portfolio-grid {
+	display: grid;
+	gap: clamp(24px, 3.4vw, 44px);
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	align-items: stretch;
+}
+
+.ardeso-portfolio-item {
+	position: relative;
+	margin: 0;
+	height: 100%;
+}
+
+.ardeso-portfolio-item img,
+.ardeso-portfolio-strip img {
+	aspect-ratio: 1.75;
+	border-radius: 8px;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.ardeso-portfolio-item.wp-block-cover {
+	aspect-ratio: 1.75;
+	min-height: 0 !important;
+	padding: 0;
+}
+
+.ardeso-portfolio-cover-text {
+	color: var(--ardeso-navy);
+	font-size: clamp(1rem, 0.86rem + 0.48vw, 1.35rem);
+	font-weight: 800;
+}
+
+.ardeso-spaced-title {
+	margin-top: 74px;
+}
+
+.ardeso-portfolio-overlay {
+	align-items: center;
+	background: rgba(255, 255, 255, 0.72);
+	border-radius: 8px;
+	color: var(--ardeso-navy);
+	display: flex;
+	font-size: clamp(1rem, 0.86rem + 0.48vw, 1.35rem);
+	font-weight: 800;
+	inset: 0;
+	justify-content: center;
+	padding: 20px;
+	position: absolute;
+	text-align: center;
+}
+
+.ardeso-brand-cloud {
+	display: grid;
+	gap: clamp(22px, 3.2vw, 38px);
+	grid-template-columns: repeat(6, minmax(0, 1fr));
+	align-items: stretch;
+}
+
+.ardeso-brand-cloud .wp-block-image {
+	margin: 0;
+}
+
+.ardeso-brand-cloud img {
+	border-radius: 8px;
+	height: auto;
+	width: 100%;
+}
+
+.ardeso-brand-cloud .ardeso-logo-tile {
+	aspect-ratio: 1;
+}
+
+.ardeso-brand-cloud .ardeso-logo-tile:nth-child(n+7) {
+	background: var(--ardeso-pink);
+}
+
+.ardeso-form-grid {
+	display: grid;
+	gap: 18px 32px;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ardeso-form-field {
+	display: grid;
+	gap: 6px;
+}
+
+.ardeso-form-field label {
+	color: var(--ardeso-blue);
+	font-size: 0.9rem;
+	font-weight: 800;
+}
+
+.ardeso-form-field input,
+.ardeso-form-field textarea,
+.ardeso-form-field select {
+	background: var(--ardeso-soft);
+	border: 1px solid var(--ardeso-navy);
+	border-radius: 7px;
+	box-sizing: border-box;
+	color: var(--ardeso-navy);
+	font: inherit;
+	min-height: 32px;
+	padding: 8px 10px;
+	width: 100%;
+}
+
+.ardeso-form-field textarea {
+	min-height: 78px;
+	resize: vertical;
+}
+
+.ardeso-form-field--full {
+	grid-column: 1 / -1;
+}
+
+.ardeso-button,
+.ardeso-form-grid button {
+	background: var(--ardeso-pink);
+	border: 0;
+	border-radius: 7px;
+	color: #ffffff;
+	cursor: pointer;
+	font-weight: 800;
+	min-height: 34px;
+	padding: 9px 28px;
+}
+
+.ardeso-footer {
+	border-top: 1px solid var(--ardeso-line);
+	margin-inline: clamp(20px, 4vw, 56px);
+	padding-block: clamp(34px, 4.4vw, 58px) 20px;
+}
+
+.ardeso-socials {
+	display: flex;
+	gap: 14px;
+	margin: 20px 0;
+}
+
+.ardeso-socials p {
+	margin: 0;
+}
+
+.ardeso-socials a {
+	align-items: center;
+	background: var(--ardeso-blue);
+	border-radius: 999px;
+	color: #ffffff;
+	display: inline-flex;
+	font-size: 0.78rem;
+	font-weight: 800;
+	height: 34px;
+	justify-content: center;
+	text-decoration: none;
+	width: 34px;
+}
+
+.ardeso-privacy-link {
+	margin-top: 64px;
+}
+
+.ardeso-privacy-link a {
+	color: var(--ardeso-blue);
+}
+
+.ardeso-copyright {
+	border-top: 1px solid var(--ardeso-line);
+	color: var(--ardeso-navy);
+	font-weight: 700;
+	margin-top: 42px;
+	padding-top: 18px;
+}
+
+.ardeso-contact-intro {
+	font-size: clamp(1rem, 0.94rem + 0.32vw, 1.24rem);
+	margin-top: 42px;
+	max-width: 1320px;
+}
+
+.ardeso-meeting-form .ardeso-form-field {
+	margin-bottom: 24px;
+}
+
+.ardeso-meeting-form label {
+	font-size: clamp(1.05rem, 0.96rem + 0.4vw, 1.35rem);
+}
+
+.ardeso-meeting-form input,
+.ardeso-meeting-form select {
+	min-height: 50px;
+}
+
+.ardeso-meeting-actions {
+	align-items: center;
+	display: grid;
+	gap: 40px;
+	grid-template-columns: minmax(0, 1fr) minmax(280px, 0.45fr);
+	margin-top: 42px;
+}
+
+@media (max-width: 900px) {
+	.ardeso-header {
+		padding-top: 26px;
+	}
+
+	.ardeso-header > .wp-block-group {
+		align-items: flex-start !important;
+		gap: 24px;
+	}
+
+	.ardeso-work-grid,
+	.ardeso-logo-grid,
+	.ardeso-values-grid,
+	.ardeso-services-split,
+	.ardeso-service-cards,
+	.ardeso-about-grid,
+	.ardeso-team-grid,
+	.ardeso-contact-grid,
+	.ardeso-portfolio-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.ardeso-service-card {
+		grid-template-columns: 1fr !important;
+	}
+
+	.ardeso-service-card .wp-block-media-text__media,
+	.ardeso-service-card .wp-block-media-text__content {
+		grid-column: 1;
+	}
+
+	.ardeso-service-card .wp-block-media-text__media {
+		grid-row: 1;
+	}
+
+	.ardeso-service-card .wp-block-media-text__content {
+		grid-row: 2;
+	}
+
+	.ardeso-brand-cloud,
+	.ardeso-portfolio-strip {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.ardeso-banner {
+		aspect-ratio: 2.4 / 1;
+		margin-bottom: 72px;
+	}
+
+	.ardeso-form-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.ardeso-meeting-actions {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 560px) {
+	.ardeso-logo-grid,
+	.ardeso-brand-cloud,
+	.ardeso-portfolio-strip {
+		grid-template-columns: 1fr;
+	}
+
+	.ardeso-slider-row {
+		grid-template-columns: 32px minmax(0, 1fr) 32px;
+	}
+}
