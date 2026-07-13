@@ -5,7 +5,7 @@ Description: Tema de bloques para agencia de marketing y publicidad, inspirado e
 Requires at least: 6.4
 Tested up to: 6.8
 Requires PHP: 7.4
-Version: 1.0.4
+Version: 1.0.5
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: ardeso-fse
@@ -738,6 +738,31 @@ a {
 	gap: 40px;
 	grid-template-columns: minmax(0, 1fr) minmax(280px, 0.45fr);
 	margin-top: 42px;
+}
+
+.is-style-ardeso-hidden {
+	display: none !important;
+}
+
+@media (min-width: 781px) {
+	.is-style-ardeso-mobile-only {
+		display: none !important;
+	}
+}
+
+@media (max-width: 780px) {
+	.is-style-ardeso-desktop-only {
+		display: none !important;
+	}
+}
+
+.editor-styles-wrapper .is-style-ardeso-hidden,
+.editor-styles-wrapper .is-style-ardeso-desktop-only,
+.editor-styles-wrapper .is-style-ardeso-mobile-only {
+	display: revert !important;
+	opacity: 0.42;
+	outline: 1px dashed var(--ardeso-pink);
+	outline-offset: 3px;
 }
 
 @media (max-width: 900px) {
