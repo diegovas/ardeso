@@ -22,10 +22,7 @@
 		<div class="ardeso-form-field"><label for="meeting-service">¿Cuál de nuestros servicios te interesa?*</label><input id="meeting-service" name="service" type="text" required></div>
 		<div class="ardeso-form-field"><label for="meeting-place">¿De dónde eres?</label><input id="meeting-place" name="place" type="text"></div>
 		<div class="ardeso-form-field"><label for="meeting-source">¿Por cuál medio te enteraste de nosotros?*</label><input id="meeting-source" name="source" type="text" required></div>
-		<div class="ardeso-meeting-actions">
-			<div style="background:#fafafa; border:1px solid #e8e8e8; color:#333; max-width:390px; padding:24px;"><input type="checkbox" aria-label="No soy un robot"> No soy un robot <span style="float:right; color:#8a8a8a;">reCAPTCHA</span></div>
-			<button class="ardeso-button" type="submit" style="font-size:clamp(1.2rem,1rem + .8vw,1.8rem); min-height:58px;">Enviar</button>
-		</div>
+		<button class="ardeso-button" type="submit" style="font-size:clamp(1.2rem,1rem + .8vw,1.8rem); margin-top:42px; min-height:58px;">Enviar</button>
 	</form>
 	<!-- /wp:html -->
 </section>

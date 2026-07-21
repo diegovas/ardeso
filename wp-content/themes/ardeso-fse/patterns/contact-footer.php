@@ -32,9 +32,6 @@
 			<!-- wp:paragraph {"className":"ardeso-kicker"} -->
 			<p class="ardeso-kicker"><a href="https://wa.me/50300000000">Escríbenos en WhatsApp</a></p>
 			<!-- /wp:paragraph -->
-			<!-- wp:paragraph {"className":"ardeso-privacy-link"} -->
-			<p class="ardeso-privacy-link"><a href="/politica-de-privacidad/">POLÍTICA DE PRIVACIDAD</a></p>
-			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
 		<!-- wp:column -->

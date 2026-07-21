@@ -479,18 +479,6 @@ a {
 	position: absolute;
 }
 
-.ardeso-banner h1 {
-	color: #ffffff;
-	font-size: clamp(1.8rem, 1rem + 2.6vw, 3.8rem);
-	font-style: italic;
-	font-weight: 700;
-	line-height: 1.22;
-	margin: 0;
-	position: relative;
-	text-align: center;
-	text-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
-}
-
 .ardeso-wide-photo img {
 	aspect-ratio: 16 / 7;
 	object-fit: cover;
@@ -697,14 +685,6 @@ a {
 	width: 34px;
 }
 
-.ardeso-privacy-link {
-	margin-top: 64px;
-}
-
-.ardeso-privacy-link a {
-	color: var(--ardeso-blue);
-}
-
 .ardeso-copyright {
 	border-top: 1px solid var(--ardeso-line);
 	color: var(--ardeso-navy);
@@ -730,14 +710,6 @@ a {
 .ardeso-meeting-form input,
 .ardeso-meeting-form select {
 	min-height: 50px;
-}
-
-.ardeso-meeting-actions {
-	align-items: center;
-	display: grid;
-	gap: 40px;
-	grid-template-columns: minmax(0, 1fr) minmax(280px, 0.45fr);
-	margin-top: 42px;
 }
 
 .is-style-ardeso-hidden {
@@ -818,9 +790,6 @@ a {
 		grid-template-columns: 1fr;
 	}
 
-	.ardeso-meeting-actions {
-		grid-template-columns: 1fr;
-	}
 }
 
 @media (max-width: 560px) {

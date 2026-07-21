@@ -9,11 +9,7 @@
 <!-- wp:group {"tagName":"section","className":"ardeso-section ardeso-no-line","layout":{"type":"constrained"}} -->
 <section class="wp-block-group ardeso-section ardeso-no-line">
 	<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/banner-camera.svg' ) ); ?>","alt":"Banner de cámara","dimRatio":10,"minHeight":250,"className":"ardeso-banner","layout":{"type":"constrained"}} -->
-	<div class="wp-block-cover ardeso-banner" style="min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-10 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Banner de cámara" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/banner-camera.svg' ) ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container">
-		<!-- wp:heading {"level":1,"textAlign":"center"} -->
-		<h1 class="wp-block-heading has-text-align-center">Nosotros Movemos<br>tu marca</h1>
-		<!-- /wp:heading -->
-	</div></div>
+	<div class="wp-block-cover ardeso-banner" style="min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-10 has-background-dim"></span><img class="wp-block-cover__image-background" alt="Banner de cámara" src="<?php echo esc_url( get_theme_file_uri( 'assets/images/banner-camera.svg' ) ); ?>" data-object-fit="cover"/><div class="wp-block-cover__inner-container"></div></div>
 	<!-- /wp:cover -->
 	<!-- wp:heading {"textAlign":"center","className":"ardeso-display ardeso-display-medium"} -->
 	<h2 class="wp-block-heading has-text-align-center ardeso-display ardeso-display-medium"><span class="ardeso-blue">Descubre cuáles son</span> <span class="ardeso-pink">nuestros servicios</span></h2>

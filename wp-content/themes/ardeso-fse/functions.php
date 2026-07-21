@@ -286,7 +286,6 @@ function ardeso_fse_customizer_defaults() {
 			'page_enabled'    => true,
 			'banner_image'    => ardeso_fse_asset_url( 'assets/images/banner-camera.svg' ),
 			'banner_alt'      => 'Banner de cámara',
-			'banner_title'    => "Nosotros Movemos\ntu marca",
 			'heading'         => 'Descubre cuáles son nuestros servicios',
 			'cards_count'     => 6,
 		),
@@ -322,8 +321,6 @@ function ardeso_fse_customizer_defaults() {
 			'social_count'     => 4,
 			'whatsapp_label'   => 'Escríbenos en WhatsApp',
 			'whatsapp_url'     => 'https://wa.me/50300000000',
-			'privacy_label'    => 'POLÍTICA DE PRIVACIDAD',
-			'privacy_url'      => '/politica-de-privacidad/',
 			'form_enabled'     => true,
 			'form_intro'       => 'Solicita más información enviándonos un mensaje:',
 			'button_label'     => 'Enviar',
@@ -493,7 +490,6 @@ function ardeso_fse_customize_register( $wp_customize ) {
 	ardeso_fse_customize_add_checkbox_control( $wp_customize, 'ardeso_services_page_enabled', 'ardeso_services_section', __( 'Mostrar página servicios', 'ardeso-fse' ), $defaults['services']['page_enabled'], $priority++ );
 	ardeso_fse_customize_add_image_control( $wp_customize, 'ardeso_services_banner_image', 'ardeso_services_section', __( 'Banner: imagen', 'ardeso-fse' ), $defaults['services']['banner_image'], $priority++ );
 	ardeso_fse_customize_add_text_control( $wp_customize, 'ardeso_services_banner_alt', 'ardeso_services_section', __( 'Banner: alt', 'ardeso-fse' ), $defaults['services']['banner_alt'], 'text', $priority++ );
-	ardeso_fse_customize_add_text_control( $wp_customize, 'ardeso_services_banner_title', 'ardeso_services_section', __( 'Banner: título', 'ardeso-fse' ), $defaults['services']['banner_title'], 'textarea', $priority++ );
 	ardeso_fse_customize_add_text_control( $wp_customize, 'ardeso_services_heading', 'ardeso_services_section', __( 'Título principal', 'ardeso-fse' ), $defaults['services']['heading'], 'text', $priority++ );
 	ardeso_fse_customize_register_collection( $wp_customize, 'ardeso_services_section', 'ardeso_service_card', 'service_card', $defaults['services']['cards_count'], array( 'image' => 'Servicio %d: imagen', 'alt' => 'Servicio %d: alt', 'title' => 'Servicio %d: título', 'text' => 'Servicio %d: texto' ), $priority );
 
@@ -734,7 +730,7 @@ function ardeso_fse_render_services_page() {
 	ob_start();
 	?>
 	<section class="wp-block-group ardeso-section ardeso-no-line">
-		<div class="wp-block-cover ardeso-banner" style="min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-10 has-background-dim"></span><img class="wp-block-cover__image-background" alt="<?php echo esc_attr( ardeso_fse_theme_mod_text( 'ardeso_services_banner_alt', $services['banner_alt'] ) ); ?>" src="<?php echo esc_url( ardeso_fse_theme_mod_image( 'ardeso_services_banner_image', $services['banner_image'] ) ); ?>" data-object-fit="cover"><div class="wp-block-cover__inner-container"><h1 class="wp-block-heading has-text-align-center"><?php echo nl2br( esc_html( ardeso_fse_theme_mod_text( 'ardeso_services_banner_title', $services['banner_title'] ) ) ); ?></h1></div></div>
+		<div class="wp-block-cover ardeso-banner" style="min-height:250px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-10 has-background-dim"></span><img class="wp-block-cover__image-background" alt="<?php echo esc_attr( ardeso_fse_theme_mod_text( 'ardeso_services_banner_alt', $services['banner_alt'] ) ); ?>" src="<?php echo esc_url( ardeso_fse_theme_mod_image( 'ardeso_services_banner_image', $services['banner_image'] ) ); ?>" data-object-fit="cover"><div class="wp-block-cover__inner-container"></div></div>
 		<h2 class="wp-block-heading has-text-align-center ardeso-display ardeso-display-medium"><span class="ardeso-blue"><?php echo esc_html( ardeso_fse_theme_mod_text( 'ardeso_services_heading', $services['heading'] ) ); ?></span></h2>
 		<p class="has-text-align-center ardeso-down">⌄</p>
 		<div class="wp-block-group ardeso-service-cards">
@@ -794,7 +790,7 @@ function ardeso_fse_render_contact_page() {
 				<div class="ardeso-form-field"><label for="meeting-service">¿Cuál de nuestros servicios te interesa?*</label><input id="meeting-service" name="service" type="text" required></div>
 				<div class="ardeso-form-field"><label for="meeting-place">¿De dónde eres?</label><input id="meeting-place" name="place" type="text"></div>
 				<div class="ardeso-form-field"><label for="meeting-source">¿Por cuál medio te enteraste de nosotros?*</label><input id="meeting-source" name="source" type="text" required></div>
-				<div class="ardeso-meeting-actions"><div style="background:#fafafa; border:1px solid #e8e8e8; color:#333; max-width:390px; padding:24px;"><input type="checkbox" aria-label="No soy un robot"> No soy un robot <span style="float:right; color:#8a8a8a;">reCAPTCHA</span></div><button class="ardeso-button" type="submit" style="font-size:clamp(1.2rem,1rem + .8vw,1.8rem); min-height:58px;"><?php echo esc_html( ardeso_fse_theme_mod_text( 'ardeso_contact_button_label', $contact['button_label'] ) ); ?></button></div>
+				<button class="ardeso-button" type="submit" style="font-size:clamp(1.2rem,1rem + .8vw,1.8rem); margin-top:42px; min-height:58px;"><?php echo esc_html( ardeso_fse_theme_mod_text( 'ardeso_contact_button_label', $contact['button_label'] ) ); ?></button>
 			</form>
 		<?php endif; ?>
 	</section>
@@ -849,7 +845,6 @@ function ardeso_fse_render_footer_shortcode() {
 					<?php endfor; ?>
 				</div>
 				<p class="ardeso-kicker"><a href="<?php echo esc_url( ardeso_fse_theme_mod_url( 'ardeso_footer_whatsapp_url', $footer['whatsapp_url'] ) ); ?>"><?php echo esc_html( ardeso_fse_theme_mod_text( 'ardeso_footer_whatsapp_label', $footer['whatsapp_label'] ) ); ?></a></p>
-				<p class="ardeso-privacy-link"><a href="<?php echo esc_url( ardeso_fse_theme_mod_url( 'ardeso_footer_privacy_url', $footer['privacy_url'] ) ); ?>"><?php echo esc_html( ardeso_fse_theme_mod_text( 'ardeso_footer_privacy_label', $footer['privacy_label'] ) ); ?></a></p>
 			</div>
 			<div class="wp-block-column">
 				<?php if ( ardeso_fse_theme_mod_bool( 'ardeso_footer_form_enabled', $footer['form_enabled'] ) ) : ?>
